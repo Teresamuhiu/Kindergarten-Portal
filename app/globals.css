@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Variables for Colors */
+:root {
+  --primary-bg: #ffffff; /* White background */
+  --primary-text: #ff0000; /* Bright red text */
+  --secondary-bg: #ff0000; /* Red background */
+  --secondary-text: #ffffff; /* White text */
+}
+
+/* Dark Mode Variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-bg: #1a1a1a; /* Dark background */
+    --primary-text: #ff6666; /* Light red text */
+    --secondary-bg: #cc0000; /* Darker red for secondary */
+    --secondary-text: #ffffff; /* White text */
+  }
+}
+
+/* Apply Global Styles */
+body {
+  background: var(--primary-bg); /* Apply primary background globally */
+  color: var(--primary-text); /* Apply primary text color */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+a {
+  color: inherit; /* Inherit text color based on context */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+
+button {
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-text);
+}
+
